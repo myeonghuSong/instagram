@@ -2,4 +2,8 @@
     <string name="app_name">instagram</string>
     <string name="creator_name">Myeonghu Song</string>
     <string name="web">web</string>
+    <string name="home_bottom_button">Home</string>
+    <string name="feed_bottom_button">Feed</string>
+    <string name="user_bottom_button">User</string>
+
 </resources>
