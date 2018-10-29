@@ -27,6 +27,7 @@ public class ShowActivity extends AppCompatActivity {
 
     private Fragment feedFragment;
     private Fragment mainFragment;
+    private Fragment userFragmennt;
     private Fragment activeFragment;
 
     private final FragmentManager fm = getSupportFragmentManager();
@@ -108,9 +109,10 @@ public class ShowActivity extends AppCompatActivity {
     private void initializeFragments() {
         mainFragment = new MainFragment();
         feedFragment = new FeedFragment();
+        userFragmennt = new UserFragment();
 
         fm.beginTransaction().add(R.id.contents, mainFragment).hide(mainFragment)
-                .add(R.id.contents, feedFragment).hide(feedFragment).commit();
+                .add(R.id.contents, feedFragment).hide(feedFragment).add(R.id.contents, userFragmennt).hide(userFragmennt).commit();
     }
 
     private void findView() { bottomNavigationView = findViewById(R.id.nav_bottom);}
@@ -128,6 +130,12 @@ public class ShowActivity extends AppCompatActivity {
                             case R.id.nav_bottom_feed:
                                 setFragment(feedFragment);
                                 return true;
+                            case R.id.nav_bottom_upload:
+                                onButtonClicked_Upload();
+                                return true;
+                            case R.id.nav_bottom_user:
+                                setFragment(userFragmennt);
+                                return true;
                         }
                         return false;
                     }
@@ -141,5 +149,14 @@ public class ShowActivity extends AppCompatActivity {
             transaction.hide(activeFragment);
         transaction.show(fragment).commit();
         activeFragment = fragment;
+    }
+
+
+    public void onButtonClicked_Upload()
+    {
+
+        Intent intent3 = new Intent(ShowActivity.this, UploadActivity.class);
+        startActivity(intent3);
+
     }
 }

@@ -5,5 +5,6 @@
     <string name="home_bottom_button">Home</string>
     <string name="feed_bottom_button">Feed</string>
     <string name="user_bottom_button">User</string>
-
+    <string name="upload_bottom_button">Upload</string>
+    <string name="url">http://dn.joongdo.co.kr/mnt/images/file/2016y/11m/29d/20161129000013555_2.jpg</string>
 </resources>
