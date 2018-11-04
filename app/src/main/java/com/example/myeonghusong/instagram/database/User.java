@@ -9,7 +9,6 @@ import java.util.List;
 public class User {
 
     private long id;
-
     private String ID;
     private String pwd;
     private String name;
