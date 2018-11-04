@@ -10,14 +10,17 @@
     <item
         android:id="@+id/nav_bottom_feed"
 
-        android:title="@string/feed_bottom_button" />
+        android:title="@string/feed_bottom_button"
+        app:showAsAction="always" />
     <item
         android:id="@+id/nav_bottom_upload"
 
-        android:title="@string/upload_bottom_button" />
+        android:title="@string/upload_bottom_button"
+        app:showAsAction="always" />
     <item
         android:id="@+id/nav_bottom_user"
 
-        android:title="@string/user_bottom_button" />
+        android:title="@string/user_bottom_button"
+        app:showAsAction="always" />
 
 </menu>

@@ -44,8 +44,13 @@
         android:id="@+id/nav_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/contents"
 
+        android:background="@android:color/holo_red_dark"
+        android:backgroundTint="@android:color/darker_gray"
+        app:itemBackground="@android:color/holo_orange_light"
+        app:itemIconTint="?android:attr/textColorLink"
+        app:itemTextColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/nav_bottom" />
 
 </LinearLayout>
