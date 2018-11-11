@@ -4,23 +4,28 @@
 
     <item
         android:id="@+id/nav_bottom_home"
-
+        android:state_checked="true"
         android:title="@string/home_bottom_button"
-        app:showAsAction="always" />
+
+         />
     <item
         android:id="@+id/nav_bottom_feed"
+        android:state_checked="true"
+
 
         android:title="@string/feed_bottom_button"
-        app:showAsAction="always" />
+         />
     <item
         android:id="@+id/nav_bottom_upload"
+        android:state_checked="true"
 
         android:title="@string/upload_bottom_button"
-        app:showAsAction="always" />
+         />
     <item
         android:id="@+id/nav_bottom_user"
+        android:state_checked="true"
 
         android:title="@string/user_bottom_button"
-        app:showAsAction="always" />
+        />
 
 </menu>

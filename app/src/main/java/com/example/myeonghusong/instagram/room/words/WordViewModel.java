@@ -1,0 +1,38 @@
+package com.example.myeonghusong.instagram.room.words;
+
+import android.app.Application;
+import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.LiveData;
+
+import com.example.myeonghusong.instagram.room.data.Word;
+import com.example.myeonghusong.instagram.room.data.source.WordRepository;
+
+import java.util.List;
+
+/**
+ * Created by myeonghusong on 2018. 11. 11..
+ */
+
+public class WordViewModel extends AndroidViewModel {
+
+    private WordRepository mRepository;
+
+    private LiveData<List<Word>> mAllWords;
+
+    public WordViewModel(Application application)
+    {
+        super(application);
+        mRepository = new WordRepository(application);
+        mAllWords=mRepository.getAllWords();
+    }
+
+    LiveData<List<Word>> getAllWords()
+    {
+        return mAllWords;
+    }
+
+    public void insert(Word word)
+    {
+        mRepository.insert(word);
+    }
+}
